@@ -3,6 +3,6 @@
     "repository": "Suicide-Squirrel/android_device_lge_g4-common-3",
     "target_path": "device/lge/g4-common"
     "remote": "github"
-    "revision": "cm-14.1"
+    "branch": "cm-14.1"
   }
 ]
