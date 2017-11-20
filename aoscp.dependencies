@@ -3,7 +3,7 @@
     "repository": "Suicide-Squirrel/android_device_lge_g4-common",
     "target_path": "device/lge/g4-common",
     "remote": "github",
-    "branch": "aoscp"
+    "branch": "aoscp-o"
   },
   {
     "repository":  "Suicide-Squirrel/proprietary_vendor_lge",
@@ -12,9 +12,9 @@
     "branch":      "cm-14.1"
   },
   {
-    "repository":  "CypherOS/proprietary_vendor_qcom_binaries",
+    "repository":  "proprietary_vendor_qcom_binaries",
     "target_path": "vendor/qcom/binaries",
-    "remote":      "github",
+    "remote":      "aoscp",
     "branch":      "nougat-mr2"
     }
 ]
