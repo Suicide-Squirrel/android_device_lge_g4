@@ -10,11 +10,5 @@
     "target_path": "vendor/lge",
     "remote":      "github",
     "branch":      "oreo"
-  },
-  {
-    "repository":  "proprietary_vendor_qcom_binaries",
-    "target_path": "vendor/qcom/binaries",
-    "remote":      "aoscp",
-    "branch":      "nougat-mr2"
-    }
+  }
 ]
