@@ -1,8 +1,8 @@
-# Inherit Lineage common bits
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Inherit AOSP device configuration for H815
 $(call inherit-product, device/lge/h815/full_h815.mk)
+
+# Inherit Lineage common bits
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
