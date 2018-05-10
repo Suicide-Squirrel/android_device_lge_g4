@@ -17,5 +17,6 @@ PRODUCT_NAME := aoscp_h815
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="g4_global_com" \
-    BUILD_FINGERPRINT="lge/p1_global_com/p1:8.0/NRD90U/171931902b165:user/release-keys" \
     PRIVATE_BUILD_DESC="p1_global_com-user 8.0 NRD90U 171931902b165 release-keys"
+
+BUILD_FINGERPRINT := "lge/p1_global_com/p1:8.0/NRD90U/171931902b165:user/release-keys"
