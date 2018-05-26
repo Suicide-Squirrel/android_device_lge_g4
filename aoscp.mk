@@ -19,4 +19,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="g4_global_com" \
     PRIVATE_BUILD_DESC="p1_global_com-user 8.0 NRD90U 171931902b165 release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_global_com/p1:8.0/OPR6.170623.030/171931902b165:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_global_com/p1:8.1.0/OPM4.171019.016.A1/4720815:user/release-keys"
