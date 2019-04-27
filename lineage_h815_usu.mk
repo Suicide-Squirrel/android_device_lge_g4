@@ -13,19 +13,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)                                                        
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)                                                
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
