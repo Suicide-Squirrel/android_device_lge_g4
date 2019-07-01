@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
@@ -32,3 +34,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := "lge/p1_lgu_kr/p1:7.0/NRD90U/171770945d928:user/release-keys"
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.do_not_init_csvt=1 \
+    rild.libargs=-d /dev/smd0 \
+    ril.subscription.types=NV,RUIM \
+    ro.telephony.call_ring.multiple=0 \
+    ro.telephony.default_network=12 \
+    telephony.lteOnCdmaDevice=0 \
+    telephony.lteOnGsmDevice=1
+
+DEBUG_ME += lineage_f500_usu.mk
