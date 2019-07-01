@@ -13,6 +13,10 @@ add_lunch_combo lineage_h811_usu-userdebug
 add_lunch_combo lineage_h811_usu-user
 add_lunch_combo lineage_h811_usu_eng
 
+add_lunch_combo lineage_h815-userdebug
+add_lunch_combo lineage_h815-user
+add_lunch_combo lineage_h815_eng
+
 add_lunch_combo lineage_h815_usu-userdebug
 add_lunch_combo lineage_h815_usu-user
 add_lunch_combo lineage_h815_usu_eng
