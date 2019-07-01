@@ -17,14 +17,11 @@
 # inherit from common g4
 -include device/lge/g4-common/BoardConfigCommon.mk
 
-# Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4341104640
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 24897388544
+# dynamic OTA info based on current model we build for
+TARGET_OTA_ASSERT_DEVICE := g4,p1,$(TARGET_DEVICE)
 
-TARGET_OTA_ASSERT_DEVICE := g4,p1,h815,h815_usu
-
-# Kernel
-TARGET_KERNEL_CONFIG := usu_h815_defconfig
+# inherit board config for current model we build for
+-include $(LOCAL_PATH)/BoardConfig_$(TARGET_DEVICE).mk
 
 # inherit from the proprietary version
 -include vendor/lge/h815/BoardConfigVendor.mk

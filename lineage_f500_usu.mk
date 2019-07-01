@@ -19,16 +19,16 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := h815_usu
-PRODUCT_NAME := lineage_h815_usu
+PRODUCT_DEVICE := f500_usu
+PRODUCT_NAME := lineage_f500_usu
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-H815
+PRODUCT_MODEL := LG-F500
 PRODUCT_MANUFACTURER := LGE
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
-    PRODUCT_NAME="g4_global_com" \
-    PRIVATE_BUILD_DESC="p1_global_com-user 6.0 MRA58K 152940055675e release-keys"
+    PRODUCT_NAME="p1_lgu_kr" \
+    PRIVATE_BUILD_DESC="p1_lgu_kr-user 7.0 NRD90U 171770945d928 release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_global_com/p1:6.0/MRA58K/152940055675e:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_lgu_kr/p1:7.0/NRD90U/171770945d928:user/release-keys"
 

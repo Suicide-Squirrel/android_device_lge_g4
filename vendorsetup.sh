@@ -4,3 +4,7 @@ export USE_NINJA=true
 add_lunch_combo lineage_h815_usu-userdebug
 add_lunch_combo lineage_h815_usu-user
 add_lunch_combo lineage_h815_usu_eng
+
+add_lunch_combo lineage_f500_usu-userdebug
+add_lunch_combo lineage_f500_usu-user
+add_lunch_combo lineage_f500_usu_eng
