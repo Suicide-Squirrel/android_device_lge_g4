@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter ls991_usu f500_usu h810_usu h811 h812_usu h815 h815_usu h818_usu h819_usu us991_usu vs986_usu,$(TARGET_DEVICE)),)
+ifneq ($(filter %ls991_usu %f500_usu %h810_usu %h811 %h812_usu %h815 %h815_usu %h818_usu %h819_usu %us991_usu %vs986_usu,$(TARGET_PRODUCT)),)
     include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
 
@@ -39,3 +39,4 @@ getholydebugvars:
 	$(hide) echo "TARGET_OTA_ASSERT_DEVICE: $(TARGET_OTA_ASSERT_DEVICE)"
 	$(hide) echo "BUILD_FINGERPRINT: $(BUILD_FINGERPRINT)"
 	$(hide) echo "TARGET_SCREEN_WIDTH: $(TARGET_SCREEN_WIDTH)"
+	$(hide) echo "DEBUGME: $(DEBUG_ME)"
