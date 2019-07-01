@@ -23,16 +23,9 @@ TARGET_SCREEN_WIDTH := 1440
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-###ifeq ($(TARGET_DEVICE),h815_usu)
-
-# call the model specific config we build for
-$(call inherit-product, $(LOCAL_PATH)/lineage_$(TARGET_DEVICE).mk)

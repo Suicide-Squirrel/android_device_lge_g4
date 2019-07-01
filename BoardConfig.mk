@@ -20,8 +20,5 @@
 # dynamic OTA info based on current model we build for
 TARGET_OTA_ASSERT_DEVICE := g4,p1,$(TARGET_DEVICE)
 
-# inherit board config for current model we build for
--include $(LOCAL_PATH)/BoardConfig_$(TARGET_DEVICE).mk
-
 # inherit from the proprietary version
 -include vendor/lge/h815/BoardConfigVendor.mk
