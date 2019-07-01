@@ -1,7 +1,10 @@
-export ANDROID_SET_JAVA_HOME=true
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export ALLOW_MISSING_DEPENDENCIES=true
 export USE_NINJA=true
 
-add_lunch_combo aoscp_h815-userdebug
-add_lunch_combo aoscp_h815-user
-add_lunch_combo aoscp_h815_eng
+add_lunch_combo lineage_h815_usu-userdebug
+add_lunch_combo lineage_h815_usu-user
+add_lunch_combo lineage_h815_usu_eng
+
+add_lunch_combo lineage_f500_usu-userdebug
+add_lunch_combo lineage_f500_usu-user
+add_lunch_combo lineage_f500_usu_eng

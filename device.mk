@@ -14,18 +14,25 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/h815/h815-vendor.mk)
+ifneq ($(filter f500_usu h815 h815_usu h818_usu h819_usu,$(TARGET_DEVICE)),)
+    $(call inherit-product-if-exists, vendor/lge/h815/h815-vendor.mk)
+endif
+
+ifneq ($(filter ls991_usu h810_usu h811 h812_usu us991_usu vs986_usu,$(TARGET_DEVICE)),)
+    $(call inherit-product-if-exists, vendor/lge/h815/h811-vendor.mk)
+endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+ifneq ($(filter f500_usu h815 h815_usu h818_usu h819_usu,$(TARGET_DEVICE)),)
 # Init configuration
 PRODUCT_PACKAGES += \
     fstab.h815 \
     init.device.rc 
+endif
 
 # Gps
 PRODUCT_COPY_FILES += \
