@@ -39,4 +39,5 @@ getholydebugvars:
 	$(hide) echo "TARGET_OTA_ASSERT_DEVICE: $(TARGET_OTA_ASSERT_DEVICE)"
 	$(hide) echo "BUILD_FINGERPRINT: $(BUILD_FINGERPRINT)"
 	$(hide) echo "TARGET_SCREEN_WIDTH: $(TARGET_SCREEN_WIDTH)"
+	$(hide) echo "CLEAN_MODEL: $(CLEAN_MODEL)"
 	$(hide) echo "DEBUGME: $(DEBUG_ME)"
