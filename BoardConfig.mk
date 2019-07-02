@@ -18,7 +18,7 @@
 -include device/lge/g4-common/BoardConfigCommon.mk
 
 # dynamic OTA info based on current model we build for
-TARGET_OTA_ASSERT_DEVICE := g4,p1,$(TARGET_DEVICE)
+TARGET_OTA_ASSERT_DEVICE := g4,p1,$(CLEAN_MODEL)
 
 # inherit from the proprietary version
 -include vendor/lge/h815/BoardConfigVendor.mk
