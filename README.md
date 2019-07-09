@@ -1,9 +1,6 @@
 ## Unified device tree for all G4 models
 
 
-## WARNING: WIP
-
-
 Copyright 2015 - The CyanogenMod Project
 
 Device configuration for LG G4 (International).
