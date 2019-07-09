@@ -31,7 +31,7 @@ CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
-    PRODUCT_NAME="p1_lgu_kr" \
+    PRODUCT_NAME="p1_global_com" \
     PRIVATE_BUILD_DESC="p1_lgu_kr-user 7.0 NRD90U 171770945d928 release-keys"
 
 BUILD_FINGERPRINT := "lge/p1_lgu_kr/p1:7.0/NRD90U/171770945d928:user/release-keys"
