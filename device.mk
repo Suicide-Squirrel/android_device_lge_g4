@@ -33,7 +33,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 ifneq ($(filter %f500_usu %h815 %h815_usu %h818_usu %h819_usu, $(TARGET_PRODUCT)),)
 # Init configuration
 PRODUCT_PACKAGES += \
-    fstab.h815 \
+    fstab.g4 \
     init.device.rc
 DEBUG_ME += fstab
 endif
