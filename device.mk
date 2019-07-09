@@ -22,8 +22,8 @@ ifneq ($(filter %f500_usu %h815 %h815_usu %h818_usu %h819_usu, $(TARGET_PRODUCT)
     $(call inherit-product-if-exists, vendor/lge/h815/h815-vendor.mk)
     DEBUG_ME += blob1
 endif
-ifneq ($(filter %ls991_usu %h810_usu %h811 %h812_usu %us991_usu %vs986_usu,$(TARGET_DEVICE)),)
-    $(call inherit-product-if-exists, vendor/lge/h815/h811-vendor.mk)
+ifneq ($(filter %ls991_usu %h810_usu %h811 %h812_usu %us991_usu %vs986_usu,$(TARGET_PRODUCT)),)
+    $(call inherit-product-if-exists, vendor/lge/h811/h811-vendor.mk)
     DEBUG_ME += blob2
 endif
 
