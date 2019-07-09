@@ -25,6 +25,10 @@ add_lunch_combo lineage_h815_usu-userdebug
 add_lunch_combo lineage_h815_usu-user
 add_lunch_combo lineage_h815_usu_eng
 
+add_lunch_combo lineage_ls991_usu-userdebug
+add_lunch_combo lineage_ls991_usu-user
+add_lunch_combo lineage_ls991_usu_eng
+
 add_lunch_combo lineage_vs986_usu-userdebug
 add_lunch_combo lineage_vs986_usu-user
 add_lunch_combo lineage_vs986_usu_eng
