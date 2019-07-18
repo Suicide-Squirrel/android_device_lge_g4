@@ -14,17 +14,17 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/aoscp.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := vs986_usu
-PRODUCT_NAME := lineage_vs986_usu
+PRODUCT_DEVICE := h815_usu
+PRODUCT_NAME := aoscp_h815_usu
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LGVS986
+PRODUCT_MODEL := LG-H815
 PRODUCT_MANUFACTURER := LGE
 
 CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
@@ -32,16 +32,17 @@ CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="p1_global_com" \
-    PRIVATE_BUILD_DESC="p1_vzw-user 6.0 MRA58K 1714511498b1b release-keys"
+    PRIVATE_BUILD_DESC="p1_global_com-user 6.0 MRA58K 152940055675e release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_vzw/p1:6.0/MRA58K/1714511498b1b:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_global_com/p1:6.0/MRA58K/152940055675e:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
     rild.libargs=-d /dev/smd0 \
     ril.subscription.types=NV,RUIM \
     ro.telephony.call_ring.multiple=0 \
-    ro.telephony.default_network=10 \
-    telephony.lteOnCdmaDevice=1
+    ro.telephony.default_network=12 \
+    telephony.lteOnCdmaDevice=0 \
+    telephony.lteOnGsmDevice=1
 
-DEBUG_ME += lineage_vs986_usu.mk
+DEBUG_ME += aoscp_h815_usu.mk

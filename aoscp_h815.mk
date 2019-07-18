@@ -14,27 +14,27 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/lineage.mk)
+$(call inherit-product, $(LOCAL_PATH)/aoscp.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Setup device specific product configuration
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := f500_usu
-PRODUCT_NAME := lineage_f500_usu
+PRODUCT_DEVICE := h815
+PRODUCT_NAME := aoscp_h815
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-F500
+PRODUCT_MODEL := LG-H815
 PRODUCT_MANUFACTURER := LGE
 
-CLEAN_MODEL := $(PRODUCT_DEVICE:_usu=)
+CLEAN_MODEL := $(PRODUCT_DEVICE)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
     PRODUCT_NAME="p1_global_com" \
-    PRIVATE_BUILD_DESC="p1_lgu_kr-user 7.0 NRD90U 171770945d928 release-keys"
+    PRIVATE_BUILD_DESC="p1_global_com-user 6.0 MRA58K 152940055675e release-keys"
 
-BUILD_FINGERPRINT := "lge/p1_lgu_kr/p1:7.0/NRD90U/171770945d928:user/release-keys"
+BUILD_FINGERPRINT := "lge/p1_global_com/p1:6.0/MRA58K/152940055675e:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.do_not_init_csvt=1 \
@@ -45,4 +45,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=0 \
     telephony.lteOnGsmDevice=1
 
-DEBUG_ME += lineage_f500_usu.mk
+DEBUG_ME += aoscp_h815.mk
