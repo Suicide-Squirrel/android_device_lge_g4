@@ -38,15 +38,21 @@ Release Date | April 2015
 every model will need a single build run.
 porting that to another rom means you might (depends on the ROM):
 
-1. rename the `lineage_*mk` files (e.g to `aoscp_*.mk`)
-2. rename `PRODUCT_NAME` in all `lineage_*mk` files to the one of your ROM
-3. rename lunch combos in `vendorsetup.sh`
-4. `<model>/BoardConfig.mk` might need to be changed to another kernel defconfig (if you want to use different ones)
-5. rename `lineage.dependencies` to the one matching your ROM
+1. rename the main mk file `lineage.mk` (e.g. to `mynewrom.mk`)
+2. rename all `lineage_*mk` files (e.g to `mynewrom_*.mk`)
+3. rename `PRODUCT_NAME` in all `lineage_*mk` files to match `mynewrom`
+4. rename inherits of `lineage.mk` to the `mynewrom.mk` from step 1
+5. rename lunch combos in `vendorsetup.sh`
+6. `<model>/BoardConfig.mk` might need to be changed to another kernel defconfig (if you want to use different ones)
+7. rename `lineage.dependencies` to `mynewrom.dependencies`
 
 that sounds a lot first but tbh its just a few `for loop` runs and its almost done.
 
 #### for 1:
+
+`mv lineage.mk mynewrom.mk`
+
+#### for 2:
 
 check how it would look like:
 
@@ -56,17 +62,27 @@ if that looks good do the change:
 
 `for i in $(ls lineage_*.mk);do mv $i ${i/lineage/mynewrom};done`
 
-#### for 2:
+#### for 3:
 
 check how it would look like:
 
-`for i in $(ls lineage_*.mk);do sed "s/lineage_/mynewrom_/g" $i ;done  | grep PRODUCT_NAME`
+`for i in $(ls mynewrom_*.mk);do sed "s/lineage_/mynewrom_/g" $i ;done  | grep PRODUCT_NAME`
 
 if that looks good do the change:
 
-`for i in $(ls lineage_*.mk);do sed -i "s/lineage_/mynewrom_/g" $i ;done`
+`for i in $(ls mynewrom_*.mk);do sed -i "s/lineage_/mynewrom_/g" $i ;done`
 
-#### for 3: 
+#### for 4:
+
+check how it would look like:
+
+`for i in $(ls *.mk);do sed 's/lineage.mk/mynewrom.mk/g' $i ;done |grep mynewrom`
+
+if that looks good do the change:
+
+`for i in $(ls *.mk);do sed -i 's/lineage.mk/mynewrom.mk/g' $i ;done`
+
+#### for 5: 
 
 check how it would look like:
 
@@ -76,7 +92,7 @@ if that looks good do the change:
 
 `for i in $(echo vendorsetup.sh);do sed -i "s/lineage_/mynewrom_/g" $i;done`
 
-#### for 4-5:
+#### for 6-7:
 
 I trust in you that you can handle that ;)
 
