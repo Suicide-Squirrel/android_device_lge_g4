@@ -38,9 +38,5 @@ PRODUCT_PACKAGES += \
 DEBUG_ME += fstab
 endif
 
-# Gps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
-
 # common g4
 $(call inherit-product, device/lge/g4-common/g4.mk)
