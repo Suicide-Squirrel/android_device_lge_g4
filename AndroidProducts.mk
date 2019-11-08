@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Screen density
+# must be defined here as they get readonly later on
+PRODUCT_AAPT_PREF_CONFIG := 560dpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
 PRODUCT_MAKEFILES += \
 	$(LOCAL_DIR)/lineage_f500_usu.mk \
 	$(LOCAL_DIR)/lineage_h810_usu.mk \
