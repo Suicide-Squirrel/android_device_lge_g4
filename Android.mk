@@ -29,15 +29,15 @@ ifneq ($(filter %ls991_usu %f500_usu %h810_usu %h811 %h812_usu %h815 %h815_usu %
     include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
 
-getholydebugvars:
-	$(hide) echo "TARGET_IS_64_BIT: $(TARGET_IS_64_BIT)"
-	$(hide) echo "TARGET_DEVICE: $(TARGET_DEVICE)"
-	$(hide) echo "TARGET_PRODUCT: $(TARGET_PRODUCT)"
-	$(hide) echo "PRODUCT_NAME: $(PRODUCT_NAME)"
-	$(hide) echo "PRODUCT_BUILD_PROP_OVERRIDES: $(PRODUCT_BUILD_PROP_OVERRIDES)"
-	$(hide) echo "TARGET_KERNEL_CONFIG: $(TARGET_KERNEL_CONFIG)"
-	$(hide) echo "TARGET_OTA_ASSERT_DEVICE: $(TARGET_OTA_ASSERT_DEVICE)"
-	$(hide) echo "BUILD_FINGERPRINT: $(BUILD_FINGERPRINT)"
-	$(hide) echo "TARGET_SCREEN_WIDTH: $(TARGET_SCREEN_WIDTH)"
-	$(hide) echo "CLEAN_MODEL: $(CLEAN_MODEL)"
-	$(hide) echo "DEBUGME: $(DEBUG_ME)"
+#getholydebugvars:
+#	$(hide) echo "TARGET_IS_64_BIT: $(TARGET_IS_64_BIT)"
+#	$(hide) echo "TARGET_DEVICE: $(TARGET_DEVICE)"
+#	$(hide) echo "TARGET_PRODUCT: $(TARGET_PRODUCT)"
+#	$(hide) echo "PRODUCT_NAME: $(PRODUCT_NAME)"
+#	$(hide) echo "PRODUCT_BUILD_PROP_OVERRIDES: $(PRODUCT_BUILD_PROP_OVERRIDES)"
+#	$(hide) echo "TARGET_KERNEL_CONFIG: $(TARGET_KERNEL_CONFIG)"
+#	$(hide) echo "TARGET_OTA_ASSERT_DEVICE: $(TARGET_OTA_ASSERT_DEVICE)"
+#	$(hide) echo "BUILD_FINGERPRINT: $(BUILD_FINGERPRINT)"
+#	$(hide) echo "TARGET_SCREEN_WIDTH: $(TARGET_SCREEN_WIDTH)"
+#	$(hide) echo "CLEAN_MODEL: $(CLEAN_MODEL)"
+#	$(hide) echo "DEBUGME: $(DEBUG_ME)"
