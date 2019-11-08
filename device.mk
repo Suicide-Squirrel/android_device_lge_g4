@@ -35,6 +35,11 @@ ifneq ($(filter %f500_usu %h815 %h815_usu %h818_usu %h819_usu, $(TARGET_PRODUCT)
 PRODUCT_PACKAGES += \
     fstab.g4 \
     init.device.rc
+
+PRODUCT_PACKAGES_ENG += \
+    fstab.g4 \
+    init.device.rc
+
 DEBUG_ME += fstab
 endif
 
