@@ -41,8 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d /dev/smd0 \
     ril.subscription.types=NV,RUIM \
     ro.telephony.call_ring.multiple=0 \
-    ro.telephony.default_network=12 \
-    telephony.lteOnCdmaDevice=0 \
-    telephony.lteOnGsmDevice=1
+    ro.telephony.default_network=9 \
+    telephony.lteOnCdmaDevice=0
 
 DEBUG_ME += lineage_h815_usu.mk
